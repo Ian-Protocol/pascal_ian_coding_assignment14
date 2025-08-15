@@ -13,4 +13,4 @@ export const Skills = () => {
       <Text content="Here you can find my skills." />
     </Container>
   );
-}
+};

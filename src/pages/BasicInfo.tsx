@@ -13,25 +13,25 @@ const Header = styled.div`
 
 const Title = styled.h1`
   font-size: 24pt;
-  color: #333;
+  background-color: #333;
   margin-bottom: 15px;
 `;
 
 const Subtitle = styled.h2`
   font-size: 20pt;
-  color: #666;
+  background-color: #666;
   margin-bottom: 15px;
 `;
 
 const Content = styled.div`
   font-size: 16pt;
-  color: #444;
+  background-color: #444;
   line-height: 1.5;
 `;
 
 const ContentTitle = styled.h3`
   font-size: 18pt;
-  color: #555;
+  background-color: #555;
   margin-top: 20px;
   margin-bottom: 10px;
 `;

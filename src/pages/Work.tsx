@@ -13,4 +13,4 @@ export const Work = () => {
       <Text content="Here you can find my projects." />
     </Container>
   );
-}
+};

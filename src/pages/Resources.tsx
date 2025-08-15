@@ -13,4 +13,4 @@ export const Resources = () => {
       <Text content="Here you can find minerals & vespene gas." />
     </Container>
   );
-}
+};
