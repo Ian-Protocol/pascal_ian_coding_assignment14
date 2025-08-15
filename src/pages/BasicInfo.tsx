@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { Text } from "../components/Text/Text";
 import { Card } from "../components/Card/Card";
@@ -50,16 +49,19 @@ export const BasicInfo = () => {
       <Card
         title="About Me"
         content="I have a passion for technology and solving problems with code. Computers are cool."
+        backgroundColor="#d8d8d8"
       />
 
       <Card
         title="Interests"
         content="In my spare time, I enjoy hiking, exploring new technologies, playing video games and Magic: The Gathering, and working on personal projects - all of which are technological in nature."
+        backgroundColor="#d8d8d8"
       />
 
       <Card
         title="Education"
         content="I (hopefully) have a diploma in Full Stack Web Development from Red River College Polytechnic."
+        backgroundColor="#d8d8d8"
       />
     </Container>
   );

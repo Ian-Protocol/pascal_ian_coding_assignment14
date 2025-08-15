@@ -29,8 +29,35 @@ const TechItem = styled.li`
 `;
 
 const skills = {
-  languages: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "PHP", "SQL", "Ruby on Rails", "Python", "Flask", "Java"],
-  tools: ["Git", "GitHub", "Docker", "Xampp", "VS Code", "VirtualBox", "ESLint", "Github Actions", "Prettier", "Linux & WSL", "Vite", "Node.js", "Storybook", "PostgreSQL"]
+  languages: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "PHP",
+    "SQL",
+    "Ruby on Rails",
+    "Python",
+    "Flask",
+    "Java",
+  ],
+  tools: [
+    "Git",
+    "GitHub",
+    "Docker",
+    "Xampp",
+    "VS Code",
+    "VirtualBox",
+    "ESLint",
+    "Github Actions",
+    "Prettier",
+    "Linux & WSL",
+    "Vite",
+    "Node.js",
+    "Storybook",
+    "PostgreSQL",
+  ],
 };
 
 export const Skills = () => {
@@ -39,7 +66,7 @@ export const Skills = () => {
       <Text content="Skills" />
       <Text content="Throughout my studies I have learned about many technologies. Below are the programming languages, frameworks, and tools I’ve used in my development projects. I wish to continue learning as much as possible!" />
 
-      <Card title="" content="">
+      <Card title="" content="" backgroundColor="#d8d8d8">
         <SectionHeading>Languages & Frameworks</SectionHeading>
         <TechList>
           {skills.languages.map((item, index) => (

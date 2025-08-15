@@ -1,16 +1,82 @@
-import React from "react";
 import styled from "styled-components";
 import { Text } from "../components/Text/Text";
+import { Img } from "../components/Img/Img";
+import { Card } from "../components/Card/Card";
+import { Button } from "../components/Button/Button";
+import mdnImg from "../assets/images/mdn.png";
+import w3Img from "../assets/images/w3.png";
+import freeCodeCampImg from "../assets/images/freecodecamp.png";
+import railsImg from "../assets/images/rails.png";
+
+const resources = [
+  {
+    title: "MDN Web Docs",
+    image: mdnImg,
+    summary: "Comprehensive documentation for HTML, CSS, JavaScript, and web APIs. An excellent resource for learning web development.",
+    link: "https://developer.mozilla.org/en-US/"
+  },
+  {
+    title: "W3Schools",
+    image: w3Img,
+    summary: "A beginner-friendly resource for learning web technologies. It provides tutorials and references for HTML, CSS, JavaScript, and more.",
+    link: "https://www.w3schools.com/"
+  },
+  {
+    title: "freeCodeCamp",
+    image: freeCodeCampImg,
+    summary: "A nonprofit organization that offers free coding tutorials and exercises. Great for hands-on learning.",
+    link: "https://www.freecodecamp.org/"
+  },
+  {
+    title: "Getting Started with Rails",
+    image: railsImg,
+    summary: "A comprehensive guide to getting started with Ruby on Rails, covering the basics of web development with Ruby and Rails.",
+    link: "https://guides.rubyonrails.org/getting_started.html"
+  }
+];
+
 
 const Container = styled.div`
   padding: 20px;
+`;
+
+const FlexWrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+`;
+
+const InfoWrapper = styled.div`
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 `;
 
 export const Resources = () => {
   return (
     <Container>
       <Text content="Resources" />
-      <Text content="Here you can find minerals & vespene gas." />
+      <Text content="Here are some helpful tools and documentation sites that supported my learning and development." />
+
+      {resources.map((resource, index) => (
+        <Card key={index} title={resource.title} content="" backgroundColor="#666">
+          <FlexWrapper>
+            <Img
+              src={resource.image}
+              alt={`${resource.title} icon`}
+              style={{ width: "150px", height: "auto", objectFit: "contain" }}
+            />
+            <InfoWrapper>
+              <Text content={resource.summary} />
+              <a href={resource.link} target="_blank" rel="noopener noreferrer">
+                <Button label="Visit Site" />
+              </a>
+            </InfoWrapper>
+          </FlexWrapper>
+        </Card>
+      ))}
     </Container>
   );
 };
