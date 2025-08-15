@@ -24,16 +24,16 @@ const Subtitle = styled.h2`
 `;
 
 const Content = styled.div`
-    font-size: 16pt;
-    color: #444;
-    line-height: 1.5;
+  font-size: 16pt;
+  color: #444;
+  line-height: 1.5;
 `;
 
 const ContentTitle = styled.h3`
-    font-size: 18pt;
-    color: #555;
-    margin-top: 20px;
-    margin-bottom: 10px;
+  font-size: 18pt;
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 10px;
 `;
 
 export const BasicInfo = () => {
