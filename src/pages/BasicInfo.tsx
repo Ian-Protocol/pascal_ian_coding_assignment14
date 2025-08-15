@@ -4,18 +4,19 @@ import { Text } from "../components/Text/Text";
 import { Card } from "../components/Card/Card";
 
 const Container = styled.div`
-  padding: 20px;
+  padding: 1rem;
+  padding-top: 0rem;
 `;
 
 const Header = styled.div`
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
 `;
 
 const Title = styled.h1`
   font-size: 24pt;
   background-color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 `;
 
 // const Subtitle = styled.h2`
@@ -46,11 +47,20 @@ export const BasicInfo = () => {
         <Text content="Full Stack Web Developer" />
       </Header>
 
-      <Card title="About Me" content="I have a passion for technology and solving problems with code. Computers are cool." />
+      <Card
+        title="About Me"
+        content="I have a passion for technology and solving problems with code. Computers are cool."
+      />
 
-      <Card title="Interests" content="In my spare time, I enjoy hiking, exploring new technologies, playing video games and Magic: The Gathering, and working on personal projects - all of which are technological in nature." />
+      <Card
+        title="Interests"
+        content="In my spare time, I enjoy hiking, exploring new technologies, playing video games and Magic: The Gathering, and working on personal projects - all of which are technological in nature."
+      />
 
-      <Card title="Education" content="I (hopefully) have a diploma in Full Stack Web Development from Red River College Polytechnic." />
+      <Card
+        title="Education"
+        content="I (hopefully) have a diploma in Full Stack Web Development from Red River College Polytechnic."
+      />
     </Container>
   );
 };

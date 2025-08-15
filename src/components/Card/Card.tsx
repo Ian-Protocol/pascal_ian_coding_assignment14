@@ -11,6 +11,7 @@ const StyledCard = styled.div<{ disabled?: boolean; backgroundColor?: string }>`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "default")};
   transition: background-color 0.2s;
+  margin: 2rem 0;
 `;
 
 const Title = styled.h3`
@@ -22,16 +23,18 @@ const Content = styled.p`
   margin: 0;
 `;
 
-export const Card: React.FC<CardProps> = ({
+export const Card: React.FC<CardProps & { children?: React.ReactNode }> = ({
   title,
   content,
   disabled = false,
   backgroundColor = "white",
+  children
 }) => {
   return (
     <StyledCard disabled={disabled} backgroundColor={backgroundColor}>
       <Title>{title}</Title>
       <Content>{content}</Content>
+      {children}
     </StyledCard>
   );
 };

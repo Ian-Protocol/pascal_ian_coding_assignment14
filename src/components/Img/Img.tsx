@@ -22,6 +22,8 @@ export const Img: React.FC<ImgProps> = ({
   alt,
   disabled = false,
   backgroundColor = "transparent",
+  style,
+  className,
 }) => {
   return (
     <StyledImg
@@ -29,6 +31,8 @@ export const Img: React.FC<ImgProps> = ({
       alt={alt}
       disabled={disabled}
       backgroundColor={backgroundColor}
+      style={style}
+      className={className}
     />
   );
 };

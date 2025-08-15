@@ -3,18 +3,24 @@ import { Text } from "../Text/Text";
 import styled from "styled-components";
 
 const NavBar = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   background-color: #333;
-  color: white;
 `;
 
 const NavLinks = styled.ul`
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 2rem;
+  margin-left: auto;
+  margin-right: 4rem;
 `;
 
 const NavItem = styled.li`
@@ -46,7 +52,7 @@ export const Nav = () => {
 
   return (
     <NavBar>
-      <Text content="My Portfolio" />
+      <Text content="Ian Pascal - Portfolio" color="white" />
       <NavLinks>
         {navItems.map((item) => (
           <NavItem key={item.path}>
