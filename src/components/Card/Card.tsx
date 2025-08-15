@@ -28,7 +28,7 @@ export const Card: React.FC<CardProps & { children?: React.ReactNode }> = ({
   content,
   disabled = false,
   backgroundColor = "white",
-  children
+  children,
 }) => {
   return (
     <StyledCard disabled={disabled} backgroundColor={backgroundColor}>
