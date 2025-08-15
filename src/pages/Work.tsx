@@ -4,6 +4,7 @@ import { Img } from "../components/Img/Img";
 import { Card } from "../components/Card/Card";
 import { Button } from "../components/Button/Button";
 import magicShopImg from "../assets/images/magic-shop.png";
+import deckBuilderImg from "../assets/images/deck-builder.png";
 
 const Container = styled.div`
   padding: 20px;
@@ -60,6 +61,14 @@ const projects = [
     link: "https://ian-protocol.github.io/",
     tech: ["HTML", "CSS", "JavaScript"],
   },
+  {
+    title: "Commander Deckbuilder",
+    image: deckBuilderImg,
+    description:
+      "Commander Deckbuilder is a project showcasing PHP and CSS. It is a Content Management System (for the fictional Magic Shop business) for building Magic: The Gathering decks allowing users to create their own decks and leave comments. Features user validation and a responsive design.",
+    link: "https://github.com/Ian-Protocol/Deckbuilder",
+    tech: ["PHP", "CSS"],
+  },
 ];
 
 export const Work = () => {
@@ -69,7 +78,12 @@ export const Work = () => {
       <Text content="Here you can find my projects." />
 
       {projects.map((project, index) => (
-        <Card key={index} title={project.title} content="" backgroundColor="#e4fdf9ff">
+        <Card
+          key={index}
+          title={project.title}
+          content=""
+          backgroundColor="#d8d8d8"
+        >
           <FlexWrapper>
             <ImageWrapper>
               <SectionHeading>Image</SectionHeading>
