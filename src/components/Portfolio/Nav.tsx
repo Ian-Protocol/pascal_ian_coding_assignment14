@@ -1,5 +1,5 @@
-import React from 'react';
-import { Text } from '../components/Text/Text';
+import { Link, useLocation } from 'react-router-dom';
+import { Text } from '../Text/Text';
 import styled from 'styled-components';
 
 const NavBar = styled.nav`
@@ -24,14 +24,41 @@ const NavItem = styled.li`
   }
 `;
 
-export const Nav = () => (
-  <NavBar>
-    <Text content="My Portfolio" />
-    <NavLinks>
-      <NavItem><a href="#basic-info">About</a></NavItem>
-      <NavItem><a href="#work">Work</a></NavItem>
-      <NavItem><a href="#skills">Skills</a></NavItem>
-      <NavItem><a href="#resources">Resources</a></NavItem>
-    </NavLinks>
-  </NavBar>
-);
+const NavLink = styled(Link)<{ active: boolean }>`
+  color: white;
+  text-decoration: none;
+  font-weight: ${({ active }) => active ? 'bold' : 'normal'};
+  
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const Nav = () => {
+  const location = useLocation();
+
+  const navItems = [
+    { path: '/', label: 'About' },
+    { path: '/work', label: 'Work' },
+    { path: '/skills', label: 'Skills' },
+    { path: '/resources', label: 'Resources' }
+  ];
+
+  return (
+    <NavBar>
+      <Text content="My Portfolio" />
+      <NavLinks>
+        {navItems.map((item) => (
+          <NavItem key={item.path}>
+            <NavLink 
+              to={item.path} 
+              active={location.pathname === item.path}
+            >
+              {item.label}
+            </NavLink>
+          </NavItem>
+        ))}
+      </NavLinks>
+    </NavBar>
+  );
+};
