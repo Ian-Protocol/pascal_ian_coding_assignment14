@@ -3,7 +3,7 @@ import { Button } from ".";
 
 // Testing the Button component.
 // Test again, for we test again after we test again.
-// TEST AGAIN! aeafdfsdf 
+// TEST AGAIN! aeafdfsdf
 
 describe("Button Component", () => {
   it("renders and is visible", () => {

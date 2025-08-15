@@ -1,6 +1,6 @@
-import { Link, useLocation } from 'react-router-dom';
-import { Text } from '../Text/Text';
-import styled from 'styled-components';
+import { Link, useLocation } from "react-router-dom";
+import { Text } from "../Text/Text";
+import styled from "styled-components";
 
 const NavBar = styled.nav`
   display: flex;
@@ -27,8 +27,8 @@ const NavItem = styled.li`
 const NavLink = styled(Link)<{ active: boolean }>`
   color: white;
   text-decoration: none;
-  font-weight: ${({ active }) => active ? 'bold' : 'normal'};
-  
+  font-weight: ${({ active }) => (active ? "bold" : "normal")};
+
   &:hover {
     text-decoration: underline;
   }
@@ -38,10 +38,10 @@ export const Nav = () => {
   const location = useLocation();
 
   const navItems = [
-    { path: '/', label: 'About' },
-    { path: '/work', label: 'Work' },
-    { path: '/skills', label: 'Skills' },
-    { path: '/resources', label: 'Resources' }
+    { path: "/", label: "About" },
+    { path: "/work", label: "Work" },
+    { path: "/skills", label: "Skills" },
+    { path: "/resources", label: "Resources" },
   ];
 
   return (
@@ -50,10 +50,7 @@ export const Nav = () => {
       <NavLinks>
         {navItems.map((item) => (
           <NavItem key={item.path}>
-            <NavLink 
-              to={item.path} 
-              active={location.pathname === item.path}
-            >
+            <NavLink to={item.path} active={location.pathname === item.path}>
               {item.label}
             </NavLink>
           </NavItem>
