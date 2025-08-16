@@ -13,7 +13,7 @@ Then run: `docker build -t pascal_ian_coding_assignment14 .`
 
 ## Step 3: Run the container.
 
-Run: `docker run -d -p 5575:80 --name pascal_ian_coding_assignment14 pascal_ian_coding_assignment14`
+Run: `docker run -d -p 5575:5575 --name pascal_ian_coding_assignment14 pascal_ian_coding_assignment14`
 
 ## Step 4: View the site.
 
