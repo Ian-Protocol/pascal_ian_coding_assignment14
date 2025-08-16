@@ -81,7 +81,10 @@ export const Resources = () => {
     <Container>
       <Header>
         <Title>Resources</Title>
-        <Subtitle>Here are some helpful tools and documentation sites that supported my learning and development.</Subtitle>
+        <Subtitle>
+          Here are some helpful tools and documentation sites that supported my
+          learning and development.
+        </Subtitle>
       </Header>
 
       {resources.map((resource, index) => (

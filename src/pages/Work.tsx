@@ -95,7 +95,9 @@ export const Work = () => {
     <Container>
       <Header>
         <Title>Work</Title>
-        <Subtitle>A small sampling of projects I have worked on throughout my studies.</Subtitle>
+        <Subtitle>
+          A small sampling of projects I have worked on throughout my studies.
+        </Subtitle>
       </Header>
 
       {projects.map((project, index) => (

@@ -83,7 +83,11 @@ export const Skills = () => {
     <Container>
       <Header>
         <Title>Skills</Title>
-        <Subtitle>Throughout my studies I have learned about many technologies. Below are the programming languages, frameworks, and tools I’ve used in my development projects. I wish to continue learning as much as possible!</Subtitle>
+        <Subtitle>
+          Throughout my studies I have learned about many technologies. Below
+          are the programming languages, frameworks, and tools I’ve used in my
+          development projects. I wish to continue learning as much as possible!
+        </Subtitle>
       </Header>
 
       <Card title="" content="" backgroundColor="#f4e9d4">
