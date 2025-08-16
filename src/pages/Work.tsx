@@ -7,7 +7,8 @@ import magicShopImg from "../assets/images/magic-shop.png";
 import deckBuilderImg from "../assets/images/deck-builder.png";
 
 const Container = styled.div`
-  padding: 20px;
+  margin: 0 auto;
+  padding: 6rem 2rem 2rem 2rem;
 `;
 
 const FlexWrapper = styled.div`
@@ -43,13 +44,31 @@ const TechList = styled.ul`
   flex-wrap: wrap;
   gap: 8px;
   margin: 0;
+  color: #f4e9d4;
 `;
 
 const TechItem = styled.li`
-  background: #eee;
+  background: #5b4a68;
   padding: 4px 10px;
   border-radius: 4px;
   font-size: 0.9rem;
+`;
+
+const Header = styled.div`
+  text-align: center;
+  margin-bottom: 4rem;
+`;
+
+const Title = styled.h1`
+  font-size: 2.5rem;
+  color: #b9d4b4;
+  margin-bottom: 1rem;
+`;
+
+const Subtitle = styled.h2`
+  font-size: 1.5rem;
+  color: #6aae9d;
+  margin-bottom: 2rem;
 `;
 
 const projects = [
@@ -74,15 +93,17 @@ const projects = [
 export const Work = () => {
   return (
     <Container>
-      <Text content="Work" />
-      <Text content="Here you can find my projects." />
+      <Header>
+        <Title>Work</Title>
+        <Subtitle>A small sampling of projects I have worked on throughout my studies.</Subtitle>
+      </Header>
 
       {projects.map((project, index) => (
         <Card
           key={index}
           title={project.title}
           content=""
-          backgroundColor="#d8d8d8"
+          backgroundColor="#f4e9d4"
         >
           <FlexWrapper>
             <ImageWrapper>

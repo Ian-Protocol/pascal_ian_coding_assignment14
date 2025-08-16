@@ -3,4 +3,6 @@ export interface ImgProps {
   alt: string;
   disabled?: boolean;
   backgroundColor?: string;
+  style?: React.CSSProperties;
+  className?: string;
 }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { CardProps } from "./Card.types";
 
 const StyledCard = styled.div<{ disabled?: boolean; backgroundColor?: string }>`
-  padding: 1rem;
+  padding: 1rem 3rem;
   border-radius: 8px;
   background-color: ${({ disabled, backgroundColor }) =>
     disabled ? "#f0f0f0" : backgroundColor || "white"};

@@ -1,67 +1,53 @@
 import styled from "styled-components";
-import { Text } from "../components/Text/Text";
+// import { Text } from "../components/Text/Text";
 import { Card } from "../components/Card/Card";
 
 const Container = styled.div`
-  padding: 1rem;
-  padding-top: 0rem;
+  margin: 0 auto;
+  padding: 6rem 2rem 2rem 2rem;
 `;
 
 const Header = styled.div`
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 `;
 
 const Title = styled.h1`
-  font-size: 24pt;
-  background-color: #333;
+  font-size: 2.5rem;
+  color: #b9d4b4;
   margin-bottom: 1rem;
 `;
 
-// const Subtitle = styled.h2`
-//   font-size: 20pt;
-//   background-color: #666;
-//   margin-bottom: 15px;
-// `;
-
-// const Content = styled.div`
-//   font-size: 16pt;
-//   background-color: #444;
-//   line-height: 1.5;
-//   padding-bottom: 15px;
-// `;
-
-// const ContentTitle = styled.h3`
-//   font-size: 18pt;
-//   background-color: #555;
-//   margin-top: 10px;
-//   margin-bottom: 10px;
-// `;
+const Subtitle = styled.h2`
+  font-size: 1.5rem;
+  color: #6aae9d;
+  margin-bottom: 2rem;
+`;
 
 export const BasicInfo = () => {
   return (
     <Container>
       <Header>
         <Title>Ian Pascal</Title>
-        <Text content="Full Stack Web Developer" />
+        <Subtitle>Full Stack Web Developer</Subtitle>
       </Header>
 
       <Card
         title="About Me"
         content="I have a passion for technology and solving problems with code. Computers are cool."
-        backgroundColor="#d8d8d8"
+        backgroundColor="#f4e9d4"
       />
 
       <Card
         title="Interests"
         content="In my spare time, I enjoy hiking, exploring new technologies, playing video games and Magic: The Gathering, and working on personal projects - all of which are technological in nature."
-        backgroundColor="#d8d8d8"
+        backgroundColor="#f4e9d4"
       />
 
       <Card
         title="Education"
         content="I (hopefully) have a diploma in Full Stack Web Development from Red River College Polytechnic."
-        backgroundColor="#d8d8d8"
+        backgroundColor="#f4e9d4"
       />
     </Container>
   );

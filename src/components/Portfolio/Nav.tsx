@@ -6,13 +6,17 @@ const NavBar = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   z-index: 1000;
+
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+
   padding: 1rem 2rem;
-  background-color: #333;
+  background-color: #5b4a68;
+
+  height: 64px;
 `;
 
 const NavLinks = styled.ul`
@@ -31,7 +35,7 @@ const NavItem = styled.li`
 `;
 
 const NavLink = styled(Link)<{ active: boolean }>`
-  color: white;
+  color: #f4e9d4;
   text-decoration: none;
   font-weight: ${({ active }) => (active ? "bold" : "normal")};
 
@@ -44,7 +48,7 @@ export const Nav = () => {
   const location = useLocation();
 
   const navItems = [
-    { path: "/", label: "About" },
+    { path: "/", label: "Basic Info" },
     { path: "/work", label: "Work" },
     { path: "/skills", label: "Skills" },
     { path: "/resources", label: "Resources" },
@@ -52,7 +56,7 @@ export const Nav = () => {
 
   return (
     <NavBar>
-      <Text content="Ian Pascal - Portfolio" color="white" />
+      <Text content="Ian Pascal - Portfolio" color="#f4e9d4" />
       <NavLinks>
         {navItems.map((item) => (
           <NavItem key={item.path}>
